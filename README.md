@@ -1,4 +1,4 @@
-+++README for yaR Project+++
+#yaR
 
 ## Overview
 
@@ -19,13 +19,9 @@ The yaR project consists of two main components: the yaR-server, a Django-based 
 python3 -m venv venv
 source venv/bin/activate
 
-markdown
-Copy code
 4. Install the required dependencies:
 pip install -r requirements.txt
 
-markdown
-Copy code
 5. Set up environment variables:
 - GEMINI_API_KEY: Your Gemini API key.
 - GOOGLE_APPLICATION_CREDENTIALS: Path to your Google credentials JSON service account file.
@@ -34,13 +30,10 @@ These can be set in your shell or through a `.env` file in the `yaR-server` dire
 6. Initialize the database (make sure you are in the directory containing `manage.py`):
 python manage.py migrate
 
-markdown
-Copy code
+
 7. Start the server:
 python manage.py runserver
 
-markdown
-Copy code
 
 ## yaR-client Setup (Raspberry Pi)
 
@@ -57,8 +50,6 @@ Copy code
 3. Install necessary Python packages (it's recommended to use a virtual environment):
 pip install -r requirements.txt
 
-css
-Copy code
 4. Make sure to enable the camera and configure the GPIO pins according to your setup.
 
 ### Running the yaR-client
@@ -66,8 +57,6 @@ Copy code
 To run the yaR-client application, execute:
 python main.py
 
-arduino
-Copy code
 
 Ensure that your server is running and accessible from the Raspberry Pi for the client to communicate properly.
 
@@ -78,4 +67,4 @@ Ensure that your server is running and accessible from the Raspberry Pi for the 
 
 For further assistance or contributions, please open an issue or submit a pull request.
 
-+++
+
