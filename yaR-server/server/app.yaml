@@ -1,0 +1,19 @@
+runtime: python39  # Specify the Python runtime
+instance_class: F1  # Specify the instance class (adjust as needed)
+
+entrypoint: gunicorn -b :$PORT server.wsgi  # Replace 'server' with your project name
+
+env_variables:
+  DJANGO_SETTINGS_MODULE: "server.settings"  # Replace 'server' with your project name
+  SECRET_KEY: "jango-insecure-fyu3ti*4fh%c4k#s%xxnj_x&7&5t8t$9%!ij&4x!y!7wbc(=01"  # Replace with your Django secret key
+  # Add other environment variables as needed
+
+handlers:
+- url: /static
+  static_dir: static/
+- url: /.*
+  script: auto
+
+automatic_scaling:
+  min_instances: 0
+  max_instances: 5  # Adjust based on your needs

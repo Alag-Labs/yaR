@@ -1,0 +1,7 @@
+*.mp3
+*.mp4
+*.jpeg
+*.jpg
+.env
+.DS_Store
+server/lookout-server-1bbade4b3b0e.json
